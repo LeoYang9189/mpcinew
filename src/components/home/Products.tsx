@@ -1,82 +1,92 @@
-import { Link } from "react-router-dom"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
 
-/**
- * 产品分类数据
- */
-const productCategories = [
+import { Link } from "react-router-dom"
+import { Card, CardContent, CardTitle } from "@/components/ui/card"
+import { GlowingBorder } from "@/components/ui/glowing-border"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Box, FileCheck, Truck, Anchor } from "lucide-react"
+
+const products = [
   {
-    title: "海关申报",
-    description: "覆盖全球主要港口的电子申报系统",
-    products: [
-      { name: "UAE MPCI", desc: "阿联酋货物预申报" },
-      { name: "AMS", desc: "美国舱单系统" },
-      { name: "ISF", desc: "进口商安全申报" },
-      { name: "AFR", desc: "日本提前申报" },
-      { name: "eManifest", desc: "加拿大电子舱单" },
-      { name: "上海预配", desc: "上海港预配舱单" },
-      { name: "青岛预配", desc: "青岛港预配舱单" },
-    ],
+    title: "海关申报系统",
+    description: "支持美国AMS/ISF、加拿大ACI、日本AFR等全球主要海关系统的自动申报。",
+    icon: FileCheck,
+    link: "/products/customs"
   },
   {
-    title: "合规资质",
-    description: "一站式资质申请与维护服务",
-    products: [
-      { name: "中国NVOCC", desc: "无船承运人资质" },
-      { name: "美国FMC", desc: "联邦海事委员会注册" },
-      { name: "加拿大NVOCC", desc: "加拿大无船承运人" },
-      { name: "海关Bond", desc: "美国海关保证金" },
-    ],
+    title: "物流轨迹追踪",
+    description: "覆盖全球98%的集装箱船舶与航空货物，提供实时位置更新与预计到达时间预测。",
+    icon: Anchor,
+    link: "/products/tracking"
+  },
+  {
+    title: "智能仓储管理",
+    description: "基于AI的库存预测与库内作业优化，帮助海外仓提升周转效率，降低运营成本。",
+    icon: Box,
+    link: "/products/wms"
+  },
+  {
+    title: "跨境物流ERP",
+    description: "专为货代企业打造的业务财务一体化管理系统，实现全流程数字化管控。",
+    icon: Truck,
+    link: "/products/erp"
   },
 ]
 
-/**
- * 产品展示组件
- */
-export default function Products() {
+export function Products() {
   return (
-    <section className="py-20 bg-slate-50">
-      <div className="container mx-auto px-4">
-        {/* 标题区 */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            我们的产品与服务
-          </h2>
-          <p className="text-lg text-slate-600">
-            专业的国际物流工具，满足您的各类申报和合规需求
-          </p>
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-teal-50/50 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-100/30 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
+              我们的<span className="text-teal-600">产品与服务</span>
+            </h2>
+            <p className="text-lg text-slate-600">
+              打造全链路数字化物流解决方案，赋能企业降本增效
+            </p>
+          </div>
+          <Button variant="ghost" className="group text-teal-600 hover:text-teal-700 hover:bg-teal-50" asChild>
+            <Link to="/products">
+              查看所有产品 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
         </div>
 
-        {/* 产品分类 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {productCategories.map((category) => (
-            <Card key={category.title} className="border-slate-200">
-              <CardHeader>
-                <CardTitle className="text-2xl">{category.title}</CardTitle>
-                <CardDescription className="text-base">{category.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 gap-3">
-                  {category.products.map((product) => (
-                    <div
-                      key={product.name}
-                      className="p-3 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors"
-                    >
-                      <div className="font-medium text-slate-900">{product.name}</div>
-                      <div className="text-sm text-slate-500">{product.desc}</div>
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {products.map((product, index) => (
+            <GlowingBorder key={index} containerClassName="h-full">
+              <Card className="group border-none shadow-sm hover:shadow-[0_0_20px_rgba(20,184,166,0.15)] transition-all duration-300 bg-white overflow-hidden h-full">
+                <div className="flex flex-col sm:flex-row h-full">
+                  <div className="p-8 flex-1">
+                    <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-teal-500 transition-all duration-300">
+                      <product.icon className="h-7 w-7 text-teal-600 group-hover:text-white transition-colors duration-300" />
                     </div>
-                  ))}
+                    <CardTitle className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">
+                      {product.title}
+                    </CardTitle>
+                    <CardContent className="p-0">
+                      <p className="text-slate-600 leading-relaxed mb-6">
+                        {product.description}
+                      </p>
+                      <div className="flex items-center text-sm font-medium text-slate-400 group-hover:text-teal-600 transition-colors">
+                        了解详情 <ArrowRight className="ml-2 h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      </div>
+                    </CardContent>
+                  </div>
+                  {/* Decorative right side/image placeholder */}
+                  <div className="w-full sm:w-1/3 bg-gradient-to-br from-slate-50 to-slate-100 relative overflow-hidden group-hover:from-teal-50 group-hover:to-teal-100 transition-colors duration-500">
+                    <div className="absolute inset-0 opacity-10 pattern-grid-lg" />
+                    <div className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4">
+                      <product.icon className="h-32 w-32 text-slate-200 group-hover:text-teal-200/50 transition-colors duration-500" />
+                    </div>
+                  </div>
                 </div>
-                <Button variant="outline" className="w-full mt-4" asChild>
-                  <Link to={`/products/${category.title === "海关申报" ? "customs" : "compliance"}`}>
-                    查看全部
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
+              </Card>
+            </GlowingBorder>
           ))}
         </div>
       </div>

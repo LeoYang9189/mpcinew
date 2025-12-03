@@ -1,9 +1,9 @@
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
-import Hero from "@/components/home/Hero"
-import Features from "@/components/home/Features"
-import Products from "@/components/home/Products"
-import CTA from "@/components/home/CTA"
+import { Hero } from "@/components/home/Hero"
+import { Features } from "@/components/home/Features"
+import { Products } from "@/components/home/Products"
+import { CTA } from "@/components/home/CTA"
 
 /**
  * 首页落地页
