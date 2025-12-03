@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import { Ship } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 
 /**
@@ -13,9 +12,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* 公司信息 */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <Ship className="h-6 w-6 text-white" />
-              <span className="text-xl font-serif font-semibold text-white">AI物流</span>
+            <div className="flex items-center">
+              <img src="/Gemini_Generated_Image_f54pr3f54pr3f54p.png" alt="AI物流" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-sm text-slate-400">
               专业的国际物流智能工具服务平台，为您提供高效、合规的物流解决方案。

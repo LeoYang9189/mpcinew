@@ -10,6 +10,7 @@ import DashboardHome from "@/pages/dashboard/Home"
 // 海关申报页面
 import AMSPage from "@/pages/dashboard/customs/AMS"
 import UAEMPCIPage from "@/pages/dashboard/customs/UAEMPCI"
+import MPCICreatePage from "@/pages/dashboard/customs/MPCICreate"
 import ISFPage from "@/pages/dashboard/customs/ISF"
 import EManifestPage from "@/pages/dashboard/customs/eManifest"
 import AFRPage from "@/pages/dashboard/customs/AFR"
@@ -42,6 +43,9 @@ function App() {
           <Route index element={<DashboardHome />} />
           {/* 海关申报 */}
           <Route path="customs/uae-mpci" element={<UAEMPCIPage />} />
+          <Route path="customs/uae-mpci/create" element={<MPCICreatePage />} />
+          <Route path="customs/uae-mpci/edit/:id" element={<MPCICreatePage />} />
+          <Route path="customs/uae-mpci/view/:id" element={<MPCICreatePage />} />
           <Route path="customs/ams" element={<AMSPage />} />
           <Route path="customs/isf" element={<ISFPage />} />
           <Route path="customs/emanifest" element={<EManifestPage />} />

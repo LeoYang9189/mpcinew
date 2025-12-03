@@ -9,7 +9,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Ship } from "lucide-react"
+import { Menu } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 /**
@@ -74,9 +74,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <Ship className="h-6 w-6 text-teal-600" />
-          <span className="text-xl font-serif font-semibold">AI物流</span>
+        <Link to="/" className="flex items-center">
+          <img src="/Gemini_Generated_Image_f54pr3f54pr3f54p.png" alt="AI物流" className="h-10 w-auto object-contain" />
         </Link>
 
         {/* 桌面端导航 */}

@@ -103,7 +103,7 @@ interface DataTableProps<TData> {
   pageSize?: number
   aggregations?: Record<string, "sum" | "count" | "mean" | "min" | "max">
   toolbarRight?: React.ReactNode
-  onSelectionChange?: (count: number) => void
+  onSelectionChange?: (selectedRows: TData[]) => void
   batchActions?: React.ReactNode
 }
 
@@ -1154,10 +1154,11 @@ export function DataTable<TData>({
 
   const selectedCount = Object.keys(rowSelection).length
 
-  // 监听选中状态变化，通知父组件
+  // 监听选中状态变化，通知父组件选中的行数据
   useEffect(() => {
-    onSelectionChange?.(selectedCount)
-  }, [selectedCount, onSelectionChange])
+    const selectedRows = table.getFilteredSelectedRowModel().rows.map(row => row.original)
+    onSelectionChange?.(selectedRows)
+  }, [rowSelection, onSelectionChange, table])
 
   /**
    * 导出数据为 Excel 或 CSV
