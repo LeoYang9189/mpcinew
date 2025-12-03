@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-[600px]">
       {/* Banner 背景图 */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/banner.jpg')" }}
       />
@@ -26,7 +26,7 @@ export default function Hero() {
           </div>
 
           {/* 主标题 */}
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             让国际物流
             <br />
             <span className="text-teal-300">更简单、更合规</span>

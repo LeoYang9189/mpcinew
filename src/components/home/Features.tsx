@@ -52,7 +52,7 @@ export default function Features() {
       <div className="container mx-auto px-4">
         {/* 标题区 */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             为什么选择 AI物流
           </h2>
           <p className="text-lg text-slate-600">
@@ -68,7 +68,7 @@ export default function Features() {
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${feature.color}`}>
                   <feature.icon className="h-6 w-6" />
                 </div>
-                <CardTitle className="font-serif text-xl">{feature.title}</CardTitle>
+                <CardTitle className="text-xl">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base text-slate-600">

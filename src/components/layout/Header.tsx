@@ -83,7 +83,7 @@ export default function Header() {
           <NavigationMenuList>
             {/* 海关申报 */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-serif">海关申报</NavigationMenuTrigger>
+              <NavigationMenuTrigger>海关申报</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
                   {customsProducts.map((product) => (
@@ -97,7 +97,7 @@ export default function Header() {
 
             {/* 合规资质 */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-serif">合规资质</NavigationMenuTrigger>
+              <NavigationMenuTrigger>合规资质</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
                   {complianceProducts.map((product) => (
@@ -111,7 +111,7 @@ export default function Header() {
 
             {/* 关于我们 */}
             <NavigationMenuItem>
-              <Link to="/about" className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground font-serif">
+              <Link to="/about" className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground">
                 关于我们
               </Link>
             </NavigationMenuItem>
@@ -138,7 +138,7 @@ export default function Header() {
           <SheetContent side="right" className="w-[300px]">
             <nav className="flex flex-col gap-4 mt-8">
               <div className="space-y-2">
-                <h4 className="font-serif font-medium text-sm text-muted-foreground">海关申报</h4>
+                <h4 className="font-medium text-sm text-muted-foreground">海关申报</h4>
                 {customsProducts.map((product) => (
                   <Link key={product.title} to={product.href} className="block py-2 text-sm hover:text-primary">
                     {product.title}
@@ -146,7 +146,7 @@ export default function Header() {
                 ))}
               </div>
               <div className="space-y-2">
-                <h4 className="font-serif font-medium text-sm text-muted-foreground">合规资质</h4>
+                <h4 className="font-medium text-sm text-muted-foreground">合规资质</h4>
                 {complianceProducts.map((product) => (
                   <Link key={product.title} to={product.href} className="block py-2 text-sm hover:text-primary">
                     {product.title}

@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* 海关申报 */}
           <div className="space-y-4">
-            <h4 className="font-serif font-semibold text-white">海关申报</h4>
+            <h4 className="font-semibold text-white">海关申报</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/products/uae-mpci" className="hover:text-white transition-colors">UAE MPCI</Link></li>
               <li><Link to="/products/ams" className="hover:text-white transition-colors">AMS</Link></li>
@@ -34,7 +34,7 @@ export default function Footer() {
 
           {/* 合规资质 */}
           <div className="space-y-4">
-            <h4 className="font-serif font-semibold text-white">合规资质</h4>
+            <h4 className="font-semibold text-white">合规资质</h4>
             <ul className="space-y-2 text-sm">
               <li><Link to="/products/china-nvocc" className="hover:text-white transition-colors">中国NVOCC</Link></li>
               <li><Link to="/products/us-fmc" className="hover:text-white transition-colors">美国FMC</Link></li>
@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* 联系我们 */}
           <div className="space-y-4">
-            <h4 className="font-serif font-semibold text-white">联系我们</h4>
+            <h4 className="font-semibold text-white">联系我们</h4>
             <ul className="space-y-2 text-sm">
               <li>客服热线：400-XXX-XXXX</li>
               <li>邮箱：support@ailogistics.com</li>

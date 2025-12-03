@@ -5,7 +5,8 @@
 
 /* 自定义字体 */
 @theme inline {
-  --font-serif: "Noto Serif SC", "Georgia", "Times New Roman", serif;
+  --font-sans: "Montserrat", "ui-sans-serif", "system-ui", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Montserrat", "Georgia", "Times New Roman", serif;
 }
 
 @theme inline {
@@ -119,7 +120,8 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
