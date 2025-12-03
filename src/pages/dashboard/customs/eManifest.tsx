@@ -1,14 +1,8 @@
-import DeclarationList from "@/components/dashboard/DeclarationList"
+import EManifestList from "@/components/dashboard/EManifestList"
 
 /**
  * eManifest 申报页面
  */
-export default function EManifestPage() {
-  return (
-    <DeclarationList
-      title="eManifest"
-      description="加拿大电子舱单管理"
-      type="eManifest"
-    />
-  )
+export default function eManifestPage() {
+  return <EManifestList title="eManifest" description="加拿大/美国电子舱单管理" />
 }

@@ -1,14 +1,8 @@
-import ComplianceList from "@/components/dashboard/ComplianceList"
+import NVOCCList from "@/components/dashboard/NVOCCList"
 
 /**
- * 中国NVOCC 资质页面
+ * 中国 NVOCC 备案页面
  */
 export default function ChinaNVOCCPage() {
-  return (
-    <ComplianceList
-      title="中国NVOCC"
-      description="中国无船承运人资质管理"
-      type="NVOCC-CN"
-    />
-  )
+  return <NVOCCList title="中国 NVOCC" description="无船承运人备案管理" />
 }

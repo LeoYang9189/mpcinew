@@ -1,14 +1,8 @@
-import DeclarationList from "@/components/dashboard/DeclarationList"
+import ISFList from "@/components/dashboard/ISFList"
 
 /**
  * ISF 申报页面
  */
 export default function ISFPage() {
-  return (
-    <DeclarationList
-      title="ISF"
-      description="进口商安全申报管理"
-      type="ISF"
-    />
-  )
+  return <ISFList title="ISF (10+2)" description="美国进口安全申报管理" />
 }

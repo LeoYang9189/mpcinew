@@ -1,14 +1,8 @@
-import ComplianceList from "@/components/dashboard/ComplianceList"
+import ACIList from "@/components/dashboard/ACIList"
 
 /**
- * 加拿大ACI 资质页面
+ * 加拿大 ACI 申报页面
  */
 export default function CanadaACIPage() {
-  return (
-    <ComplianceList
-      title="加拿大ACI"
-      description="加拿大预先商业信息管理"
-      type="ACI"
-    />
-  )
+  return <ACIList title="加拿大 ACI" description="加拿大预申报规则管理" />
 }
